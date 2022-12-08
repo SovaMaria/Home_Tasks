@@ -39,15 +39,17 @@ void PrintMatrix(int[,] matrix)
 
 void ArithmeticMean(int[,] matrix)
 {
-    for (int j = 1; j < matrix.GetLength(1); j++)
+    double summaArithmeticMean;
+    double resultMathRound;
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        double summaArithmeticMean = 0;
+        summaArithmeticMean = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
            summaArithmeticMean += matrix[i, j];
         }
-double resultMathRound = Math.Round(summaArithmeticMean / matrix.GetLength(0), 2);
-Console.Write($"Среднее арифметическое столбца {j} ----> {resultMathRound} ");
+resultMathRound = Math.Round(summaArithmeticMean / matrix.GetLength(0), 2);
+Console.Write($"Среднее арифметическое столбца {j + 1} ----> {resultMathRound} \n");
     }
 }
 
