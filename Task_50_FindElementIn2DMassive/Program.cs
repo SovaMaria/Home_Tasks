@@ -44,7 +44,7 @@ void PrintMatrix(int[,] matrix)
 void FindElementMatrix(int[,] matrix)
 {
     if (row < matrix.GetLength(1) && column < matrix.GetLength(1))
-        Console.WriteLine($"Значение элемента: {matrix[row, column]}");
+        Console.WriteLine($"Значение элемента: {matrix[row -1, column -1 ]}");
     else
         Console.WriteLine($"Элемент на строке: {row}, столбец {column} в массиве отсутствует");
 }
